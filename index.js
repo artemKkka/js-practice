@@ -48,7 +48,7 @@
 //     console.log(i)
 // }                        
 
- 
+
 
 // let str = 'Hello World'
 // let newStr = str.toLowerCase()
@@ -91,42 +91,95 @@
 // let color = obj["colors"][2]
 // console.log(color)
 
-let colors = ["Blue", "Yellow", "Red", "White", "Pink"];
-colors.splice(3, 2,"green", "black");
-let colorsToString = colors.join(', ').length
-console.log(colorsToString)
+// let colors = ["Blue", "Yellow", "Red", "White", "Pink"];
+// colors.splice(3, 2,"green", "black");
+// let colorsToString = colors.join(', ').length
+// console.log(colorsToString)
 
 
-let obj = { colors: ["red", "yellow", "blue"], b: 20, c: 10 };
-let sum = obj['b']+ obj['c']
-console.log(sum)
+// let obj = { colors: ["red", "yellow", "blue"], b: 20, c: 10 };
+// let sum = obj['b']+ obj['c']
+// console.log(sum)
 
 
-let arrOfObj = [{name: 'Jonh', age: '15'}, {name: 'Jane', age: '24'}, {name: 'Mary', age: '21'}]
-let findAge = arrOfObj.find(item=>item.age>20)
-console.log(findAge)
+// let arrOfObj = [{name: 'Jonh', age: '15'}, {name: 'Jane', age: '24'}, {name: 'Mary', age: '21'}]
+// let findAge = arrOfObj.find(item=>item.age>20)
+// console.log(findAge)
 
 
-let newArr = [0, 1, "hello", { name: "Alex", age: 20 }, false];
-console.log(newArr.indexOf(1))
+// let newArr = [0, 1, "hello", { name: "Alex", age: 20 }, false];
+// console.log(newArr.indexOf(1))
 
 
-console.log(colors.includes('green'))
+// console.log(colors.includes('green'))
 
 
-let arrOfObj1 = [
-    { name: "Alex", age: 19, dog: false },
-    { name: "Maria", age: 30, dog: true },
-    { name: "John", age: 15, dog: false },
-  ];
-let dogFind = arrOfObj1.map((item)=>{
-    if(item.dog==false) {
-        console.log(item)
+// let arrOfObj1 = [
+//     { name: "Alex", age: 19, dog: false },
+//     { name: "Maria", age: 30, dog: true },
+//     { name: "John", age: 15, dog: false },
+//   ];
+// let dogFind = arrOfObj1.map((item)=>{
+//     if(item.dog==false) {
+//         console.log(item)
+//     }
+// })
+
+// let ageFind = arrOfObj1.map((item)=>{
+//     if(item.age>20) {
+//         console.log(item)
+//     }
+// })
+
+let arrOfObjects = [
+    { name: "Alex", age: 50, dog: false },
+    { name: "Maria", age: 32, dog: true },
+    { name: "John", age: 29, dog: false },
+];
+let ageFind = arrOfObjects.map((item) => {
+    if (item.age < 40) {
+        console.log(item.name.toUpperCase())
     }
 })
+let arrOfObjectsJoin = arrOfObjects.map(item => { console.log(item.name + "!") })
 
-let ageFind = arrOfObj1.map((item)=>{
-    if(item.age>20) {
-        console.log(item)
+
+let newARR = ["Mary", { name: "John", age: 30 }, 45, false, 1999];
+console.log(newARR[2] + newARR[4])
+
+
+function func(a, b) {
+    if (a < 5) {
+        return a + b
     }
+
+    else if (a > 5) {
+        return a - b
+    }
+
+    else if (a === 5) {
+        return 'a===5'
+    }
+}
+console.log(func(5, 7))
+
+
+
+let str = "The Ugly Duck";
+function func2(Word) {
+    if (str.includes(Word)) {
+        console.log('yes', Word)
+    }
+
+    else {
+        console.log('no', Word)
+    }
+}
+func2('The')
+
+
+let mas = ["Львів", "Київ", "Харків", "Луцьк"];
+let find = mas.find((value) => {
+    return value.length > 5
 })
+console.log(find)
